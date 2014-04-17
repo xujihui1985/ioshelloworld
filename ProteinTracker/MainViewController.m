@@ -25,8 +25,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSInteger goal = [[NSUserDefaults standardUserDefaults] integerForKey:@"goal"];
+    self.goalLable.text =  [NSString stringWithFormat:@"Goal: %i",goal];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(goalChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
 }
+
+-(void)goalChanged:(NSNotification *)notification {
+    NSUserDefaults *defaults = (NSUserDefaults *) [notification object];
+    NSInteger goal = [defaults integerForKey:@"goal"];
+    self.goalLable.text = [NSString stringWithFormat:@"Goal: %i",goal];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -38,6 +49,10 @@
     total += self.amountText.text.intValue;
     self.totalLable.text = [NSString stringWithFormat:@"%d", total];
     [amountHistory addObject:[NSNumber numberWithInt:self.amountText.text.intValue]];
+    if(total >= self.goalLable.text.intValue){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You reached your goal" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

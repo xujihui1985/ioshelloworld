@@ -12,7 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSDictionary *appDefault = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:100] forKey:@"goal"];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefault];
     return YES;
 }
 							

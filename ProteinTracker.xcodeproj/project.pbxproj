@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1404BE46190010830099FAFC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1404BE45190010830099FAFC /* Settings.bundle */; };
 		14FF287418FEC7D900210F9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF287318FEC7D900210F9E /* Foundation.framework */; };
 		14FF287618FEC7D900210F9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF287518FEC7D900210F9E /* CoreGraphics.framework */; };
 		14FF287818FEC7D900210F9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF287718FEC7D900210F9E /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1404BE45190010830099FAFC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		14FF287018FEC7D900210F9E /* ProteinTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProteinTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF287318FEC7D900210F9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14FF287518FEC7D900210F9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +126,7 @@
 				14FF288918FEC7D900210F9E /* MainViewController.m */,
 				14FF288B18FEC7D900210F9E /* Images.xcassets */,
 				14FF287A18FEC7D900210F9E /* Supporting Files */,
+				1404BE45190010830099FAFC /* Settings.bundle */,
 			);
 			path = ProteinTracker;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1404BE46190010830099FAFC /* Settings.bundle in Resources */,
 				14FF288C18FEC7D900210F9E /* Images.xcassets in Resources */,
 				14FF287E18FEC7D900210F9E /* InfoPlist.strings in Resources */,
 				14FF288718FEC7D900210F9E /* Main.storyboard in Resources */,
@@ -462,6 +466,7 @@
 				14FF28A418FEC7D900210F9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14FF28A518FEC7D900210F9E /* Build configuration list for PBXNativeTarget "ProteinTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +475,7 @@
 				14FF28A718FEC7D900210F9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
